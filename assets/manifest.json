@@ -1,0 +1,696 @@
+{
+  "canvas": {
+    "w": 896,
+    "h": 768,
+    "char_h": 660,
+    "baseline": 24
+  },
+  "fps_ms": 80,
+  "tone_ref": {
+    "cyan": [
+      92.4,
+      213.9,
+      230.8
+    ],
+    "white": [
+      253.6,
+      253.6,
+      253.1
+    ],
+    "pink": [
+      245.7,
+      138.7,
+      179.5
+    ],
+    "dark": [
+      44.6,
+      68.3,
+      86.5
+    ]
+  },
+  "cyan_ref": [
+    90.0,
+    209.2,
+    226.1
+  ],
+  "faces": [
+    "front",
+    "side_left",
+    "back",
+    "side_right"
+  ],
+  "postures": {
+    "standing": {
+      "label": "站立",
+      "faces": [
+        "front",
+        "side_left",
+        "back",
+        "side_right"
+      ],
+      "turn": "turn",
+      "enter": null,
+      "idle": "idle_front",
+      "walk": {
+        "left": "walk_left",
+        "right": "walk_right"
+      },
+      "run": {
+        "left": "run_left",
+        "right": "run_right"
+      }
+    },
+    "sitting": {
+      "label": "坐下",
+      "faces": [
+        "sit_front"
+      ],
+      "turn": null,
+      "enter": "sitdown",
+      "idle": "sitdown",
+      "walk": null,
+      "run": null
+    },
+    "prone": {
+      "label": "趴着",
+      "faces": [
+        "prone_front",
+        "prone_left",
+        "prone_right"
+      ],
+      "turn": "prone_turn",
+      "enter": null,
+      "idle": [
+        "prone_idle",
+        null,
+        null
+      ],
+      "walk": {
+        "left": "walk4_left",
+        "right": "walk4_right"
+      },
+      "run": null
+    },
+    "dozing": {
+      "label": "打瞌睡",
+      "faces": [
+        "doze_front"
+      ],
+      "turn": null,
+      "enter": null,
+      "idle": "doze",
+      "walk": null,
+      "run": null
+    },
+    "sleeping": {
+      "label": "趴着睡",
+      "faces": [
+        "sleep_left",
+        "sleep_right"
+      ],
+      "turn": null,
+      "enter": null,
+      "idle": [
+        "sleep_left",
+        "sleep_right"
+      ],
+      "walk": null,
+      "run": null
+    }
+  },
+  "gated": [
+    "prone_left",
+    "prone_right",
+    "walk4_left",
+    "walk4_right",
+    "sleep_left",
+    "sleep_right"
+  ],
+  "skins": {
+    "default": {
+      "label": "薄荷（猫猫）",
+      "poses": {
+        "front": {
+          "file": "skins/default/poses/front.png",
+          "k": 1.0,
+          "content": [
+            707,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "side_left": {
+          "file": "skins/default/poses/side_left.png",
+          "k": 1.0,
+          "content": [
+            698,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "side_right": {
+          "file": "skins/default/poses/side_right.png",
+          "k": 1.0,
+          "content": [
+            621,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "back": {
+          "file": "skins/default/poses/back.png",
+          "k": 1.0,
+          "content": [
+            613,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "sit_front": {
+          "file": "skins/default/poses/sit_front.png",
+          "k": 1.0,
+          "content": [
+            830,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "prone_front": {
+          "file": "skins/default/poses/prone_front.png",
+          "k": 1.0,
+          "content": [
+            757,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "prone_left": {
+          "file": "skins/default/poses/prone_left.png",
+          "k": 1.0,
+          "content": [
+            793,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "prone_right": {
+          "file": "skins/default/poses/prone_right.png",
+          "k": 1.0,
+          "content": [
+            726,
+            660
+          ],
+          "canvas": [
+            896,
+            768
+          ]
+        },
+        "doze_front": {
+          "file": "skins/default/poses/doze_front.png",
+          "k": 1.0,
+          "content": [
+            724,
+            676
+          ],
+          "canvas": [
+            896,
+            768
+          ],
+          "derived_from": "doze#0"
+        },
+        "sleep_left": {
+          "file": "skins/default/poses/sleep_left.png",
+          "k": 1.0,
+          "content": [
+            836,
+            554
+          ],
+          "canvas": [
+            896,
+            768
+          ],
+          "derived_from": "sleep_left#0"
+        },
+        "sleep_right": {
+          "file": "skins/default/poses/sleep_right.png",
+          "k": 1.0,
+          "content": [
+            841,
+            513
+          ],
+          "canvas": [
+            896,
+            768
+          ],
+          "derived_from": "sleep_right#0"
+        }
+      },
+      "anims": {
+        "turn": {
+          "dir": "skins/default/anim/turn",
+          "frames": 121,
+          "fps": 24,
+          "stride": 2,
+          "mode": "per_frame",
+          "cycle": 98,
+          "keys": [
+            2,
+            71,
+            47,
+            28
+          ],
+          "path": [
+            0.0,
+            0.18,
+            0.55,
+            1.13,
+            2.37,
+            5.42,
+            13.16,
+            18.14,
+            22.67,
+            27.76,
+            36.87,
+            41.66,
+            46.37,
+            53.03,
+            62.7,
+            69.9,
+            79.37,
+            89.08,
+            103.0,
+            112.03,
+            122.12,
+            129.72,
+            139.88,
+            145.53,
+            150.58,
+            155.71,
+            160.91,
+            162.84,
+            164.35,
+            166.52,
+            169.94,
+            173.37,
+            178.2,
+            185.72,
+            195.51,
+            201.19,
+            206.64,
+            212.34,
+            221.54,
+            227.37,
+            230.91,
+            234.54,
+            239.05,
+            241.21,
+            242.83,
+            244.89,
+            247.75,
+            249.24,
+            250.66,
+            252.47,
+            255.96,
+            258.22,
+            260.65,
+            263.93,
+            268.68,
+            272.3,
+            276.35,
+            280.76,
+            288.09,
+            293.44,
+            298.74,
+            305.21,
+            315.46,
+            321.93,
+            327.53,
+            333.43,
+            340.75,
+            344.85,
+            347.6,
+            350.73,
+            353.12,
+            354.2,
+            355.96,
+            359.09,
+            366.91,
+            370.77,
+            375.71,
+            380.58,
+            389.77,
+            394.25,
+            398.64,
+            403.19,
+            411.62,
+            416.02,
+            420.76,
+            425.38,
+            433.79,
+            437.95,
+            441.28,
+            445.67,
+            453.29,
+            456.73,
+            460.73,
+            465.75,
+            473.43,
+            477.18,
+            481.01,
+            485.77,
+            488.83
+          ],
+          "faces": [
+            "front",
+            "side_left",
+            "back",
+            "side_right"
+          ]
+        },
+        "idle_front": {
+          "dir": "skins/default/anim/idle_front",
+          "frames": 121,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence"
+        },
+        "walk_left": {
+          "dir": "skins/default/anim/walk_left",
+          "frames": 121,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "gait": {
+            "period": 25,
+            "seam": 1.57,
+            "loop": [
+              0,
+              121
+            ],
+            "loop_seam": 1.57,
+            "phase0": 0
+          }
+        },
+        "walk_right": {
+          "dir": "skins/default/anim/walk_right",
+          "frames": 121,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "gait": {
+            "period": 23,
+            "seam": 0.56,
+            "loop": [
+              0,
+              121
+            ],
+            "loop_seam": 0.56,
+            "phase0": 3
+          }
+        },
+        "run_left": {
+          "dir": "skins/default/anim/run_left",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "gait": {
+            "period": 18,
+            "seam": 0.25,
+            "loop": [
+              0,
+              97
+            ],
+            "loop_seam": 0.25,
+            "phase0": 3
+          }
+        },
+        "run_right": {
+          "dir": "skins/default/anim/run_right",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "gait": {
+            "period": 13,
+            "seam": 0.24,
+            "loop": [
+              0,
+              97
+            ],
+            "loop_seam": 0.24,
+            "phase0": 43
+          }
+        },
+        "sitdown": {
+          "dir": "skins/default/anim/sitdown",
+          "frames": 145,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "settle_at": 67,
+          "loop": [
+            67,
+            85
+          ],
+          "enter_at": 17,
+          "hold_move": 0.24,
+          "enter_move": 1.279
+        },
+        "prone_turn": {
+          "dir": "skins/default/anim/prone_turn",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "cycle": 97,
+          "keys": [
+            40,
+            8,
+            96
+          ],
+          "path": [
+            0.0,
+            0.34,
+            0.62,
+            0.71,
+            0.99,
+            1.67,
+            4.1,
+            5.49,
+            8.64,
+            11.03,
+            16.05,
+            18.87,
+            23.29,
+            25.74,
+            32.5,
+            35.38,
+            39.62,
+            43.28,
+            50.02,
+            53.46,
+            57.46,
+            62.16,
+            69.26,
+            72.73,
+            77.35,
+            80.96,
+            88.36,
+            92.04,
+            97.33,
+            100.87,
+            108.16,
+            112.57,
+            117.45,
+            121.3,
+            129.35,
+            133.22,
+            138.1,
+            142.77,
+            149.58,
+            153.59,
+            158.03,
+            162.84,
+            169.63,
+            173.06,
+            178.09,
+            182.65,
+            189.9,
+            193.59,
+            199.28,
+            203.83,
+            211.98,
+            215.91,
+            221.88,
+            226.73,
+            235.31,
+            238.99,
+            245.05,
+            250.7,
+            258.93,
+            262.94,
+            269.37,
+            274.18,
+            282.54,
+            287.49,
+            293.16,
+            297.69,
+            306.07,
+            310.21,
+            316.06,
+            320.84,
+            329.63,
+            332.96,
+            338.85,
+            342.68,
+            350.41,
+            354.02,
+            359.06,
+            362.65,
+            370.06,
+            372.79,
+            377.68,
+            381.04,
+            387.23,
+            390.02,
+            394.15,
+            397.53,
+            401.64,
+            402.66,
+            404.85,
+            405.23,
+            405.39,
+            405.46,
+            405.55,
+            405.66,
+            405.79,
+            405.84,
+            405.88,
+            443.51
+          ],
+          "faces": [
+            "prone_front",
+            "prone_left",
+            "prone_right"
+          ],
+          "linear": true
+        },
+        "walk4_left": {
+          "dir": "skins/default/anim/walk4_left",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "recenter",
+          "src_clipped": 24,
+          "clip_at": 73,
+          "gait": {
+            "period": 0,
+            "seam": 29.26,
+            "loop": [
+              0,
+              97
+            ],
+            "loop_seam": 29.26,
+            "phase0": 0
+          }
+        },
+        "walk4_right": {
+          "dir": "skins/default/anim/walk4_right",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "recenter",
+          "scrub_leak": 47,
+          "gait": {
+            "period": 22,
+            "seam": 11.28,
+            "loop": [
+              51,
+              95
+            ],
+            "loop_seam": 2.22,
+            "phase0": 72
+          }
+        },
+        "prone_idle": {
+          "dir": "skins/default/anim/prone_idle",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "recenter",
+          "loop": [
+            0,
+            44
+          ],
+          "loop_stride": 2
+        },
+        "doze": {
+          "dir": "skins/default/anim/doze",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "sequence",
+          "loop": [
+            0,
+            43
+          ],
+          "loop_stride": 2
+        },
+        "sleep_left": {
+          "dir": "skins/default/anim/sleep_left",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "recenter",
+          "loop": [
+            0,
+            97
+          ],
+          "loop_stride": 4
+        },
+        "sleep_right": {
+          "dir": "skins/default/anim/sleep_right",
+          "frames": 97,
+          "fps": 24,
+          "stride": 2,
+          "mode": "recenter",
+          "loop": [
+            0,
+            41
+          ],
+          "loop_stride": 2
+        },
+        "hug": {
+          "dir": "skins/default/anim/hug",
+          "frames": 76,
+          "fps": 24,
+          "stride": 2,
+          "mode": "head"
+        }
+      },
+      "variants": {}
+    }
+  }
+}

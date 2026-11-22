@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# 打包中间物
+build/
+dist/
+_release/
+*.spec
